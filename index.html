@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Illustrated Story Map</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore Board Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Bookstore Board Game</h1>
+  
+  <div id="game-board">
+    <!-- Example: 10 steps on the board -->
+    <div class="cell" data-dialog="Welcome to the first bookstore! Browse some books.">1</div>
+    <div class="cell">2</div>
+    <div class="cell" data-dialog="You found a rare book!">3</div>
+    <div class="cell">4</div>
+    <div class="cell" data-dialog="The bookstore has a sale today!">5</div>
+    <div class="cell">6</div>
+    <div class="cell" data-dialog="A new author signing event is here!">7</div>
+    <div class="cell">8</div>
+    <div class="cell" data-dialog="Find a hidden treasure in the bookstore!">9</div>
+    <div class="cell">10</div>
+  </div>
 
-<div id="map"></div>
+  <div id="controls">
+    <button id="roll-dice">Roll Dice 🎲</button>
+    <p>Current Player: <span id="current-player">1</span></p>
+    <p>Dice Rolled: <span id="dice-result">0</span></p>
+  </div>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="script.js"></script>
+  <div id="dialog-box" class="hidden">
+    <p id="dialog-text"></p>
+    <button id="close-dialog">Close</button>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
-
